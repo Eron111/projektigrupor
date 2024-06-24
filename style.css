@@ -1,72 +1,54 @@
-body{
-    font-family: 'Helvetica Neue';
-    background-color: #efefef;
-    font-size:150%;}
-    
-  a{color: blue;}
-  
-  .main-class{
-  width: 500px;
-  margin: auto;
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 10px;}
-  
- .header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 20px 100px;
-	background: steelblue;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	z-index: 100;
-}
-
-.navbar a {
-	position: relative;
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-decoration: none;
-	margin-left: 40px;
-}
-
-.navbar a::before {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 0;
-	height: 2px;
-	background: #fff;
-}
-
-.navbar a:hover::before {
-	width: 100%;
-}
-  
-  .slider{
-    margin-top: 10px;
-    width: 500px;
-    overflow: hidden;
-  }
-  
-  .slider ul {
-    list-style: none;
-    width: 500px;
-    position: relative;
-    left: 0px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .slider ul li{
-    float:left;
-  }
-    
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f4f4f4;
+      padding: 0.5em 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.5em 1em;
+    }
+    nav a:hover {
+      background-color: #ddd;
+    }
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    .slideshow-container img {
+      width: 100%;
+      height: auto;
+    }
+    .slideshow-container .prev, .slideshow-container .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .slideshow-container .prev {
+      left: 0;
+    }
+    .slideshow-container .next {
+      right: 0;
+    }
+ 
     
     
     
