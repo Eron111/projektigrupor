@@ -6,14 +6,32 @@ document.addEventListener('DOMContentLoaded', function() {
     closeBtn.classList.add('close');
     closeBtn.innerHTML = '&times;';
 
+    // Function to handle opening the modal
+    function openModal(itemContent) {
+        const purchaseBtn = document.createElement('button');
+        purchaseBtn.classList.add('purchase-button');
+        purchaseBtn.textContent = 'Purchase';
+        
+        modalContent.innerHTML = ''; // Clear previous content
+        modalContent.appendChild(closeBtn);
+        modalContent.appendChild(itemContent);
+        modalContent.appendChild(purchaseBtn);
+        modal.style.display = 'block';
+        document.body.style.overflow = 'scroll'; // Prevent scrolling
+
+        // Ensure the purchase button click event is attached
+        purchaseBtn.addEventListener('click', function() {
+            console.log('Purchase button clicked');
+            alert('Item Purchased');
+        });
+        
+    }
+
+    // Attach event listeners to each gallery item
     galleryItems.forEach(function(item) {
         item.addEventListener('click', function() {
             const itemContent = item.querySelector('.image-text').cloneNode(true);
-            modalContent.innerHTML = ''; // Clear previous content
-            modalContent.appendChild(closeBtn);
-            modalContent.appendChild(itemContent);
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            openModal(itemContent);
         });
     });
 
@@ -32,28 +50,23 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = ''; // Restore scrolling
         }
     });
-});
 
-
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
+    // Terms of Service Modal
     const tosButton = document.getElementById('tos-button');
-    const modal = document.getElementById('tos-modal');
-    const closeButton = document.getElementsByClassName('close2')[0];
+    const tosModal = document.getElementById('tos-modal');
+    const tosCloseButton = document.getElementsByClassName('close2')[0];
 
     tosButton.onclick = function() {
-        modal.style.display = 'block';
+        tosModal.style.display = 'block';
     }
 
-    closeButton.onclick = function() {
-        modal.style.display = 'none';
+    tosCloseButton.onclick = function() {
+        tosModal.style.display = 'none';
     }
 
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
+        if (event.target == tosModal) {
+            tosModal.style.display = 'none';
         }
     }
 });
-
