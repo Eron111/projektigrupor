@@ -229,6 +229,14 @@ text-blk {
     text-decoration: none;
     cursor: pointer;
 }
+.btn{
+  background-color: #313131;
+}
+.btn:hover{
+  background-color: #313131;
+
+}
+
 
 @media (max-width: 500px) {
   .outer-container {
