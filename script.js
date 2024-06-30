@@ -1,84 +1,69 @@
+// JavaScript for slideshow
+var slideIndex = 0;
+showSlides();
 
-    var slideIndex = 1;
-    showSlides(slideIndex);
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+//JavaScript for the review section
+var reviewIndex = 0;
+showReviewSlides(reviewIndex);
 
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slides[slideIndex - 1].style.display = "block";
-    }
-  
+function plusReviewSlides(n) {
+  showReviewSlides(reviewIndex += n);
+}
 
+function showReviewSlides(n) {
+  var i;
+  var reviews = document.getElementsByClassName("review-slide");
 
-$(document).ready(function(){
+  if (n >= reviews.length) {
+    reviewIndex = 0;
+  } else if (n < 0) {
+    reviewIndex = reviews.length - 1;
+  }
 
-    var imageBox = $('.slider ul'),
-        imageWidth = $('.slider ul li').first().children('img').width(),
-        imageQuantity = $('.slider ul').children('li').length,
-        currentImage = 1;
-  
-    imageBox.css('width', imageWidth*imageQuantity);
-  
-    $('.nav button').on('click',function(){
-      var whichButton = $(this).data('nav');
-  
-      if(whichButton === 'next'){
-  
-        if(currentImage === imageQuantity){
-          currentImage = 1;
-          transition(currentImage,imageWidth);
-        }else{
-          currentImage++;
-          transition(currentImage,imageWidth);
-        }
-      
-      }else if(whichButton === 'prev'){
-  
-        if(currentImage === 1){
-          currentImage = imageQuantity;
-          transition(currentImage,imageWidth);
-        }else{
-          currentImage--;
-          transition(currentImage,imageWidth);
-        }
-      }
-    });
-  
-    function transition(currentImageInput, imageWidthInput) {
-      var pxValue = -(currentImageInput-1) * imageWidthInput
-        imageBox.animate({
-          'left': pxValue
-        })
-    }
-  });
+  for (i = 0; i < reviews.length; i++) {
+    reviews[i].style.display = "none";
+  }
+
+  reviews[reviewIndex].style.display = "block";
+}
+
+// Auto cycle reviews every 5 seconds
+setInterval(() => {
+  plusReviewSlides(1);
+}, 5000);
 
 
 
+
+// JavaScript for modal
 document.addEventListener('DOMContentLoaded', (event) => {
-    const tosButton = document.getElementById('tos-button');
-    const modal = document.getElementById('tos-modal');
-    const closeButton = document.getElementsByClassName('close2')[0];
+  const tosButton = document.getElementById('tos-button');
+  const modal = document.getElementById('tos-modal');
+  const closeButton = document.getElementsByClassName('close')[0];
 
-    tosButton.onclick = function() {
-        modal.style.display = 'block';
-    }
+  tosButton.onclick = function () {
+    modal.style.display = 'block';
+  }
 
-    closeButton.onclick = function() {
-        modal.style.display = 'none';
-    }
+  closeButton.onclick = function () {
+    modal.style.display = 'none';
+  }
 
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
+  window.onclick = function (event) {
+    if (event.target == moda) {
+      modal.style.display = 'none';
     }
+  }
 });

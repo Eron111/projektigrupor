@@ -3,74 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FurniLux</title>
+  <title>FurniLux - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <h1>Welcome to Our Furniture Store</h1>
   </header>
   
   <nav>
-    <a href="index.html">Home</a>
+    <a href="#">Home</a>
     <a href="Gallery/gallery.html">Products</a>
     <a href="about.html">About Us</a>
     <a href="plator/index.html">Contact</a>
   </nav>
   
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="image1.jpg" alt="Furniture 1">
+  <div class="hero">
+    <div class="slideshow">
+      <div class="mySlides fade">
+        <img src="img/img1.jpg" alt="Slide 1">
+      </div>
+      <div class="mySlides fade">
+        <img src="img/img2.jp.jpg" alt="Slide 2">
+      </div>
+      <div class="mySlides fade">
+        <img src="img/img3.jpg" alt="Slide 3">
+      </div>
     </div>
-    <div class="mySlides fade">
-      <img src="image2.jpg" alt="Furniture 2">
+    <div class="hero-content">
+      <h1>Discover Luxury Living</h1>
+      <p>Find the perfect furniture to elevate your home.</p>
+      <button onclick="location.href='Gallery/gallery.html'">Shop Now</button>
     </div>
-    <div class="mySlides fade">
-      <img src="image3.jpg" alt="Furniture 3">
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-  <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h2>About Us</h2>
-                <p>Welcome to Luxuriate, where elegance meets comfort. Our exquisite collection of furniture is crafted to elevate your living experience.</p>
-            </div>
-            <div class="footer-column">
-                <h2>Contact Us</h2>
-                <p>luxuriate.com</p>
-                <p>Phone: +123 456 7890</p>
-                <p>Address: 123 Luxury St, Elegance City</p>
-            </div>
-            <div class="footer-column">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="plator/index.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h2>Terms of Service</h2>
-                <button class="button2" id="tos-button">Read Terms of Service</button>
-            </div>
-        </div>
-        <div id="tos-modal" class="modal2">
-            <div class="modal-content2">
-                <span class="close2">&times;</span>
-                <h2>Terms of Service</h2>
-                <p>[Insert Terms of Service content here]</p>
-            </div>
-        </div>
-    </footer>
+  
+  <section class="about-us">
+    <h2>About Us</h2>
+    <p>Welcome to FurniLux, where elegance meets comfort. Our exquisite collection of furniture is crafted to elevate your living experience. We believe in the perfect blend of style, quality, and comfort, ensuring that every piece in our collection stands the test of time. Join us in transforming your home into a luxurious haven.</p>
+  </section>
 
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-slider">
+      <div class="review-slide fade">
+        <p>"Amazing quality and superb service! Highly recommend FurniLux."</p>
+        <span>- Sarah K.</span>
+      </div>
+      <div class="review-slide fade">
+        <p>"The furniture is as luxurious as promised. My living room looks fantastic!"</p>
+        <span>- James M.</span>
+      </div>
+      <div class="review-slide fade">
+        <p>"Elegant and comfortable pieces. I'm a very satisfied customer."</p>
+        <span>- Lisa T.</span>
+      </div>
+    </div>
+    <a class="prev-review" onclick="plusReviewSlides(-1)">&#10094;</a>
+    <a class="next-review" onclick="plusReviewSlides(1)">&#10095;</a>  
+  </section>
+  
+  
+  
 
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2>About Us</h2>
+        <p>Welcome to FurniLux, where elegance meets comfort. Our exquisite collection of furniture is crafted to elevate your living experience.</p>
+      </div>
+      <div class="footer-column">
+        <h2>Contact Us</h2>
+        <p>luxuriate.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Luxury St, Elegance City</p>
+      </div>
+      <div class="footer-column">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="Gallery/gallery.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h2>Terms of Service</h2>
+        <button class="button" id="tos-button">Read Terms of Service</button>
+      </div>
+    </div>
+    <div id="tos-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Terms of Service</h2>
+        <p>[Insert Terms of Service content here]</p>
+      </div>
+    </div>
+  </footer>
 
-
-    <script  type="text/script" src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-

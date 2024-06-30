@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Purchase button clicked');
             alert('Item Purchased');
         });
-        
     }
 
     // Attach event listeners to each gallery item
@@ -69,4 +68,18 @@ document.addEventListener('DOMContentLoaded', function() {
             tosModal.style.display = 'none';
         }
     }
+
+    // Search Functionality
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', function() {
+        const filter = searchInput.value.toLowerCase();
+        galleryItems.forEach(function(item) {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            if (title.includes(filter)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
 });
