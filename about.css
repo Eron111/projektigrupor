@@ -1,10 +1,5 @@
- header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1em;
-    }
-    nav {
+
+ nav {
       display: flex;
       justify-content: center;
       background-color: #f4f4f4;
@@ -17,6 +12,13 @@
     }
     nav a:hover {
       background-color: #ddd;
+    }
+    footer{
+ 
+      justify-content: center;
+      background-color: #f4f4f4;
+      padding: 0.5em 0;
+
     }
 
 
@@ -71,7 +73,7 @@ text-blk {
   font-size: 35px;
   font-weight: 700;
   line-height: 48px;
-  color: rgb(0, 135, 177);
+  color:#313131;
   margin: 0 0 10px 0;
 }
 
@@ -116,7 +118,7 @@ text-blk {
 .position {
   font-size: 25px;
   font-weight: 700;
-  color: rgb(0, 135, 177);
+  color: #313131;
   margin-top: 0px;
   margin-right: 0px;
   margin-bottom: 50px;
@@ -132,6 +134,7 @@ text-blk {
   width: 280px;
   margin: 0 0 40px 0;
 }
+ 
 .footer {
     background-color: #333;
     color: white;
@@ -226,6 +229,14 @@ text-blk {
     text-decoration: none;
     cursor: pointer;
 }
+.btn{
+  background-color: #313131;
+}
+.btn:hover{
+  background-color: #313131;
+
+}
+
 
 @media (max-width: 500px) {
   .outer-container {
