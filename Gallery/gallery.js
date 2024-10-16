@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+i8document.addEventListener('DOMContentLoaded', function() {
     const galleryItems = document.querySelectorAll('.gallery-item');
     const modal = document.getElementById('modal');
     const modalContent = document.getElementById('modal-content');
